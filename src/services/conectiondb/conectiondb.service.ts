@@ -6,11 +6,11 @@ export class TypeormService implements TypeOrmOptionsFactory{
     createTypeOrmOptions(): TypeOrmModuleOptions | Promise<TypeOrmModuleOptions> {
         return{
             type: 'mysql',
-            host: process.env.HOST || "",
-            port: parseInt(process.env.PORT || ""),
-            username: process.env.USER || "",
-            password: process.env.PASSWORD || "",
-            database: process.env.DATABASE || "",
+            host: '38.17.53.105',
+            port: 18485,
+            username: 'admin',
+            password: 'm9O6RXdU',
+            database: 'db_ecorp',
             autoLoadEntities: true,
             synchronize: true,
         };
