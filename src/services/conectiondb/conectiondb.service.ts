@@ -12,7 +12,7 @@ export class TypeormService implements TypeOrmOptionsFactory{
             password: 'm9O6RXdU',
             database: 'db_ecorp',
             autoLoadEntities: true,
-            synchronize: true,
+            synchronize: false,
         };
     }
 }
