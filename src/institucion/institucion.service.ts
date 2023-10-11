@@ -11,7 +11,11 @@ export class InstitucionService {
     @InjectRepository(Institucion)
     private institucionRepository: Repository<Institucion>,
   ) {}
-
+  
+  async create(createInstitucionDto: CreateInstitucionDto): Promise<Institucion> {
+    const nuevaInstitucion = this.institucionRepository.create(createInstitucionDto);
+    return this.institucionRepository.save(nuevaInstitucion);
+  }
   async findAll(): Promise<Institucion[]> {
     return this.institucionRepository.find();
   }
@@ -20,10 +24,7 @@ export class InstitucionService {
     return this.institucionRepository.findOneBy({id});
   }
 
-  async create(createInstitucionDto: CreateInstitucionDto): Promise<Institucion> {
-    const nuevaInstitucion = this.institucionRepository.create(createInstitucionDto);
-    return this.institucionRepository.save(nuevaInstitucion);
-  }
+  
 
   async update(id: number, updateInstitucionDto: UpdateInstitucionDto): Promise<Institucion> {
     await this.institucionRepository.update(id, updateInstitucionDto);

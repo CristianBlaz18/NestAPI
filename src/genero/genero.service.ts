@@ -1,11 +1,20 @@
 import { Injectable } from '@nestjs/common';
 import { CreateGeneroDto } from './dto/create-genero.dto';
 import { UpdateGeneroDto } from './dto/update-genero.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Genero } from './entities/genero.entity';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class GeneroService {
-  create(createGeneroDto: CreateGeneroDto) {
-    return 'This action adds a new genero';
+  constructor(
+    @InjectRepository(Genero)
+    private generoRepository: Repository<Genero>,
+  ) {}
+  
+  async create(createGeneroDto: CreateGeneroDto): Promise<Genero>  {
+    const nuevoGenero = this.generoRepository.create(createGeneroDto);
+    return this.generoRepository.save(nuevoGenero);
   }
 
   findAll() {

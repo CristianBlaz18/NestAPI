@@ -3,6 +3,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { InstitucionModule } from './institucion/institucion.module';
 import { CategoriaModule } from './categoria/categoria.module';
 import { GeneroModule } from './genero/genero.module';
+import { PaisModule } from './pais/pais.module';
+import { TipoCarnetIndentidadModule } from './tipo_carnet_indentidad/tipo_carnet_indentidad.module';
+import { DocenteModule } from './docente/docente.module';
 
 @Module({
   imports: [
@@ -19,6 +22,9 @@ import { GeneroModule } from './genero/genero.module';
     InstitucionModule,
     CategoriaModule,
     GeneroModule,
+    PaisModule,
+    TipoCarnetIndentidadModule,
+    DocenteModule,
   ],
   controllers: [],
   providers: [],

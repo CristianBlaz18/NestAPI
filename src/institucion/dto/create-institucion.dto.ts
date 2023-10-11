@@ -1,5 +1,4 @@
-import { IsInt, IsNotEmpty, IsString, Length } from "class-validator";
-import { PrimaryGeneratedColumn } from "typeorm";
+import { IsInt, IsNotEmpty, IsString, Length } from "class-validator"
 
 export class CreateInstitucionDto {
     
