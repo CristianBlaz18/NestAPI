@@ -1,5 +1,4 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { IsNotEmpty, IsString, IsInt, Length } from 'class-validator';
 
 @Entity({ name: 'tbl_institucion' })
 export class Institucion {

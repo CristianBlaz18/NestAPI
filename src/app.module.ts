@@ -1,26 +1,26 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { TypeormService } from './services/conectiondb/conectiondb.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Category } from './models/category.module';
-import { CategoryController } from './controller/course/category.controller';
-import { CategoryService } from './services/category/category.service';
-// import { Courses } from './models/course.module';
-// import { CourseController } from './controller/course/course.controller';
-// import { CourseService } from './services/course/course.service';
 import { InstitucionModule } from './institucion/institucion.module';
-import { Institucion } from './institucion/entities/institucion.entity';
+import { CategoriaModule } from './categoria/categoria.module';
+import { GeneroModule } from './genero/genero.module';
 
 @Module({
   imports: [
-    //Importacion del servicio para conectar a la DB
-    TypeOrmModule.forRootAsync({useClass: TypeormService}),
-    //Importancion de los servicios
-    TypeOrmModule.forFeature([Category]),
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: '38.17.53.105',
+      port: 18485,
+      username: 'admin',
+      password: 'm9O6RXdU',
+      database: 'db_ecorp',
+      autoLoadEntities: true,
+      synchronize: false,
+    }),
     InstitucionModule,
+    CategoriaModule,
+    GeneroModule,
   ],
-  controllers: [AppController, CategoryController],
-  providers: [AppService, TypeormService, CategoryService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

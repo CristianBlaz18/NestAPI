@@ -14,7 +14,6 @@ async function bootstrap() {
       transform:true,
     })
   );
-  app.enableCors();
   //Puerto del servidor
   await app.listen(4000);
 }
