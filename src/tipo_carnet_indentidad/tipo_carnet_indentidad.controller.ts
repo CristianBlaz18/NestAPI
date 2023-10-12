@@ -2,7 +2,9 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { TipoCarnetIndentidadService } from './tipo_carnet_indentidad.service';
 import { CreateTipoCarnetIndentidadDto } from './dto/create-tipo_carnet_indentidad.dto';
 import { UpdateTipoCarnetIndentidadDto } from './dto/update-tipo_carnet_indentidad.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Tipo Carnet')
 @Controller('tipocarnet')
 export class TipoCarnetIndentidadController {
   constructor(private readonly tipoCarnetIndentidadService: TipoCarnetIndentidadService) {}

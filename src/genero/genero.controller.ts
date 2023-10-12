@@ -2,7 +2,9 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { GeneroService } from './genero.service';
 import { CreateGeneroDto } from './dto/create-genero.dto';
 import { UpdateGeneroDto } from './dto/update-genero.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Genero')
 @Controller('genero')
 export class GeneroController {
   constructor(private readonly generoService: GeneroService) {}
