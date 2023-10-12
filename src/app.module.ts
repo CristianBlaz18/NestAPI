@@ -8,16 +8,21 @@ import { TipoCarnetIndentidadModule } from './tipo_carnet_indentidad/tipo_carnet
 import { DocenteModule } from './docente/docente.module';
 import { TutorModule } from './tutor/tutor.module';
 import { CursoModule } from './curso/curso.module';
+import { ConfigModule } from '@nestjs/config';
+
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '38.17.53.105',
-      port: 18485,
-      username: 'admin',
-      password: 'm9O6RXdU',
-      database: 'db_ecorp',
+      host: process.env.DB_HOST,
+      port: parseInt(process.env.DB_PORT),
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
       autoLoadEntities: true,
       synchronize: false,
     }),
