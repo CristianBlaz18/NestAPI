@@ -21,14 +21,20 @@ export class CursoService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} curso`;
+    return `This action returns a #${id} curso1`;
   }
 
   update(id: number, updateCursoDto: UpdateCursoDto) {
-    return `This action updates a #${id} curso`;
+    return `This action updates a #${id} curso2`;
   }
 
   remove(id: number) {
-    return `This action removes a #${id} curso`;
+    return `This action removes a #${id} curso3`;
+  }
+
+  async cursosmenuinicio(id:number){
+    const query = `Call sp_obtener_cursos(${id})`
+    return this.cursoRepository.query(query);
+
   }
 }

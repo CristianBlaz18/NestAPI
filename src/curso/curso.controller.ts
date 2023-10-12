@@ -17,18 +17,25 @@ export class CursoController {
     return this.cursoService.findAll();
   }
 
+  @Get('cursosinicio/:id')
+  cursosmenuinicio(@Param('id') id:number){
+    return this.cursoService.cursosmenuinicio(id);
+  }
+
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.cursoService.findOne(+id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateCursoDto: UpdateCursoDto) {
+  update(@Param('id') id: number, @Body() updateCursoDto: UpdateCursoDto) {
     return this.cursoService.update(+id, updateCursoDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.cursoService.remove(+id);
   }
+
+  
 }
