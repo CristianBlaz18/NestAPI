@@ -31,8 +31,14 @@ export class CursoService {
   remove(id: number) {
     return `This action removes a #${id} curso3`;
   }
-
+  
   async cursosmenuinicio(id:number){
+    const query = `Call sp_obtener_cursos(${id})`
+    return this.cursoRepository.query(query);
+
+  }
+
+  async cursos(id:number){
     const query = `Call sp_obtener_cursos(${id})`
     return this.cursoRepository.query(query);
 

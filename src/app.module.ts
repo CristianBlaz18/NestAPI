@@ -9,6 +9,7 @@ import { DocenteModule } from './docente/docente.module';
 import { TutorModule } from './tutor/tutor.module';
 import { CursoModule } from './curso/curso.module';
 import { ConfigModule } from '@nestjs/config';
+import { CalificacionModule } from './calificacion/calificacion.module';
 
 
 @Module({
@@ -34,6 +35,7 @@ import { ConfigModule } from '@nestjs/config';
     DocenteModule,
     TutorModule,
     CursoModule,
+    CalificacionModule,
   ],
   controllers: [],
   providers: [],

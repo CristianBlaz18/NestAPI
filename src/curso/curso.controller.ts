@@ -23,6 +23,10 @@ export class CursoController {
   cursosmenuinicio(@Param('id') id:number){
     return this.cursoService.cursosmenuinicio(id);
   }
+  @Get('cursos/:id')
+  cursos(@Param('id') id:number){
+    return this.cursoService.cursos(id);
+  }
 
   @Get(':id')
   findOne(@Param('id') id: number) {
