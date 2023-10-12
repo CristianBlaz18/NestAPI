@@ -7,6 +7,7 @@ import { PaisModule } from './pais/pais.module';
 import { TipoCarnetIndentidadModule } from './tipo_carnet_indentidad/tipo_carnet_indentidad.module';
 import { DocenteModule } from './docente/docente.module';
 import { TutorModule } from './tutor/tutor.module';
+import { CursoModule } from './curso/curso.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { TutorModule } from './tutor/tutor.module';
     TipoCarnetIndentidadModule,
     DocenteModule,
     TutorModule,
+    CursoModule,
   ],
   controllers: [],
   providers: [],
