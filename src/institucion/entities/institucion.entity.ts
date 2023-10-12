@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Docente } from 'src/docente/entities/docente.entity';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 
 @Entity({ name: 'tbl_institucion' })
 export class Institucion {
@@ -28,5 +29,8 @@ export class Institucion {
 
   @Column({ type: 'tinyint', name: 'institucion_estado' })
   estado: number;
+
+  // @OneToMany(() => Docente, (docente) => docente.institucion)
+  //   docentes: Docente[];
 }
 

@@ -2,14 +2,14 @@ import { Injectable } from '@nestjs/common';
 import { CreateTipoCarnetIndentidadDto } from './dto/create-tipo_carnet_indentidad.dto';
 import { UpdateTipoCarnetIndentidadDto } from './dto/update-tipo_carnet_indentidad.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { TipoCarnetIndentidad } from './entities/tipo_carnet_indentidad.entity';
+import { TipoCarnetIdentidad } from './entities/tipo_carnet_indentidad.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()
 export class TipoCarnetIndentidadService {
   constructor(
-    @InjectRepository(TipoCarnetIndentidad)
-    private tipocarnetidentidadRepository: Repository<TipoCarnetIndentidad>,
+    @InjectRepository(TipoCarnetIdentidad)
+    private tipocarnetidentidadRepository: Repository<TipoCarnetIdentidad>,
   ) {}
 
   create(createTipoCarnetIndentidadDto: CreateTipoCarnetIndentidadDto) {

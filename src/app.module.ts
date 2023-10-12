@@ -6,6 +6,7 @@ import { GeneroModule } from './genero/genero.module';
 import { PaisModule } from './pais/pais.module';
 import { TipoCarnetIndentidadModule } from './tipo_carnet_indentidad/tipo_carnet_indentidad.module';
 import { DocenteModule } from './docente/docente.module';
+import { TutorModule } from './tutor/tutor.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { DocenteModule } from './docente/docente.module';
     PaisModule,
     TipoCarnetIndentidadModule,
     DocenteModule,
+    TutorModule,
   ],
   controllers: [],
   providers: [],

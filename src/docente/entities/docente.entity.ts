@@ -1,4 +1,7 @@
 import { Genero } from "src/genero/entities/genero.entity";
+import { Institucion } from "src/institucion/entities/institucion.entity";
+import { Pais } from "src/pais/entities/pais.entity";
+import { TipoCarnetIdentidad } from "src/tipo_carnet_indentidad/entities/tipo_carnet_indentidad.entity"
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({name: 'tbl_docente'})
@@ -49,24 +52,33 @@ export class Docente {
     permiso_cupon: number;
 
     @Column({ type: 'varchar', name: 'docente_carnet_identidad', length: 10 })
-    carnet: string;
+    carnetnumero: string;
 
-    // @Column({ type: 'varchar', name: 'docente_genero_id' })
-    // genero_id: string;
+    // @ManyToOne(() => Genero,{ eager:true })
+    // @JoinColumn({name : 'docente_genero_id'})
+    // genero: Genero;
 
-    @ManyToOne(() => Genero,{eager:true})
-    @JoinColumn({name : 'docente_genero_id'})
-    genero: Genero;
-
-    // @OneToOne(() => Pais, { cascade: true })
+    // @ManyToOne(() => Pais, { eager: true })
     // @JoinColumn({ name: 'docente_pais_id' })
-    // docente_pais: Pais;
+    // pais: Pais;
 
-    // @OneToOne(() => TipoCarnetIdentidad, { cascade: true })
+    // @ManyToOne(() => TipoCarnetIdentidad, { eager: true })
     // @JoinColumn({ name: 'docente_tipo_carnet_id' })
-    // docente_tipo_carnet: TipoCarnetIdentidad;
+    // carnet: TipoCarnetIdentidad;
 
-    // @OneToOne(() => Institucion, { cascade: true })
+    // @ManyToOne(() => Institucion, { eager: true })
     // @JoinColumn({ name: 'docente_institucion_id' })
-    // docente_institucion: Institucion;
+    // institucion: Institucion;
+
+    @Column({ type: 'tinyint', name: 'docente_genero_id' })
+    genero_id: number;
+
+    @Column({ type: 'int', name: 'docente_pais_id' })
+    pais_id: number;
+
+    @Column({ type: 'tinyint', name: 'docente_tipo_carnet_id' })
+    carnet_id: number;
+
+    @Column({ type: 'tinyint', name: 'docente_institucion_id' })
+    institucion_id: number;
 }

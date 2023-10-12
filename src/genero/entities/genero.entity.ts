@@ -7,6 +7,6 @@ export class Genero {
     id:number;
     @Column({ type: 'varchar', length: 30, name: 'genero_nombre' })
     nombre:string;
-    @OneToMany(() => Docente, (docente) => docente.genero)
-    docentes: Docente[];
+    // @OneToMany(() => Docente, (docente) => docente.genero)
+    // docentes: Docente[];
 }
