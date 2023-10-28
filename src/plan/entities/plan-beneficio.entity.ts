@@ -14,4 +14,3 @@ export class Beneficio {
   @Column()
   plan_id: number;
 }// Añade esta línea de exportación
-

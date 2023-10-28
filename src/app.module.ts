@@ -11,6 +11,14 @@ import { CursoModule } from './curso/curso.module';
 import { ConfigModule } from '@nestjs/config';
 import { CalificacionModule } from './calificacion/calificacion.module';
 import { PlanModule } from './plan/plan.module';
+import { CompraRapidaModule } from './compra-rapida/compra-rapida.module';
+import { CapacitacionDetalleModule } from './capacitacion-detalle/capacitacion-detalle.module';
+import { ServiciosCapacitacionModule } from './servicios-capacitacion/servicios-capacitacion.module';
+import { UsuarioModule } from './usuario/usuario.module';
+import { CertificadoModule } from './certificado/certificado.module';
+import { EmpresaModule } from './empresa/empresa.module';
+
+
 
 
 @Module({
@@ -38,6 +46,12 @@ import { PlanModule } from './plan/plan.module';
     CursoModule,
     CalificacionModule,
     PlanModule,
+    CompraRapidaModule,
+    CapacitacionDetalleModule,
+    ServiciosCapacitacionModule,
+    UsuarioModule,
+    CertificadoModule,
+    EmpresaModule,
   ],
   controllers: [],
   providers: [],

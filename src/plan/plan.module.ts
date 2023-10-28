@@ -12,3 +12,4 @@ import { Beneficio } from './entities/plan-beneficio.entity';
   providers: [PlanService],
 })
 export class PlanModule {}
+

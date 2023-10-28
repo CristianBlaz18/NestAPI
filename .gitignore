@@ -1,7 +1,10 @@
 # compiled output
 /dist
 /node_modules
+<<<<<<< HEAD
 .env
+=======
+>>>>>>> 8ad06cc46ddc3e1821445ded4ef9459b02247e76
 
 # Logs
 logs

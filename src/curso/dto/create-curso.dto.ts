@@ -1,1 +1,5 @@
-export class CreateCursoDto {}
+
+
+export class CreateCursoDto {
+
+}

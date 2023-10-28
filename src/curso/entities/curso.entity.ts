@@ -41,16 +41,16 @@ export class Curso {
     @Column({ name: 'curso_video_introductorio', type: 'varchar', length: 100 })
     videoIntroductorio: string;
 
-    @Column({ name: 'curso_fecha_inicio', type: 'datetime' })
+    @Column({ name: 'curso_fecha_inicio', type: 'date' })
     fechaInicio: Date;
 
-    @Column({ name: 'curso_fecha_fin', type: 'datetime' })
+    @Column({ name: 'curso_fecha_fin', type: 'date' })
     fechaFin: Date;
 
-    @Column({ name: 'curso_fecha_inicio_muestra', type: 'datetime' })
+    @Column({ name: 'curso_fecha_inicio_muestra', type: 'date' })
     fechaInicioMuestra: Date;
 
-    @Column({ name: 'curso_fecha_fin_muestra', type: 'datetime' })
+    @Column({ name: 'curso_fecha_fin_muestra', type: 'date' })
     fechaFinMuestra: Date;
 
     @Column({ name: 'curso_estado', type: 'varchar', length: 20 })
